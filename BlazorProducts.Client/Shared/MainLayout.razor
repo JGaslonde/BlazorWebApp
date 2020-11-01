@@ -11,7 +11,13 @@
         </div>
 
         <div class="content px-4">
-            @Body
+            <CascadingValue Name="HeadingColour" Value="@_colour">
+                @Body
+            </CascadingValue>
         </div>
     </div>
 </div>
+@code
+{
+    private readonly string _colour = "#0505b5";
+}

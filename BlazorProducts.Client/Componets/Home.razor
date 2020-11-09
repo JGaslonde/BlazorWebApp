@@ -4,21 +4,9 @@
         @Title
     </h1>
     <p>
-        Feel free to 
-        <a href="https://www.redbubble.com" target="_blank">Visit our shop</a>
-        anytime you want
+        @VisitShopContent
     </p>
     <p>
-        <img @attributes="AdditionalAttributes" class="img-fluid" />
+        <img @attributes="AdditionalAttributes" class="img-fluid"/>
     </p>
 </div>
-@code {
-    [Parameter]
-    public string Title { get; set; }
-
-    [Parameter(CaptureUnmatchedValues = true)]
-    public Dictionary<string, object> AdditionalAttributes { get; set; }
-
-    [CascadingParameter(Name = "HeadingColour")]
-    public string Colour { get; set; }
-}
